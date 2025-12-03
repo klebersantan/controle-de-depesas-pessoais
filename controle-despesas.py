@@ -100,13 +100,27 @@ def resumo_mensal(df):
     print("Detalhamento:\n")
     print(filtro[["Dia", "Categoria", "Descrição", "Valor"]].to_string(index=False))
 
+#def somar_gastos_por_categoria(df)
+#print(" resumo dos gatos por categoria")
+
+#gastos_xlsx = df.groupby("Categoria")["Valor"].sum().reset_index()  #aqui eu invoco meu arquivo excel de gastos e somo os valores por categoria
+#print("gastos_xlsx")
+
+#gastos_xlsx.to_excel("resumo_gastos.xlsx", index=False) # aqui exporto meu arquivo do excel com gastos por categoria
+    #print("\nResumo exportado para 'resumo_gastos.xlsx'\n")
+    
+    #return gastos_xlsx # aqui retorno meu arquivo
+
+# não farei código todo isso só um exemplo e tem outras varias para ser arrumada logo abaixo
+# falta criar também outro dataframe com variaveis de Somar os gastos por categoria.
+
 
 def menu():
     df = carregar_arquivo()
 
     while True:
         print("\n===== CONTROLE DE GASTOS PESSOAIS =====")
-        print("1 - Cadastrar novo gasto")
+        print("1 - Cadastrar novo gasto") 
         print("2 - Mostrar resumo mensal")
         print("3 - Sair")
 
